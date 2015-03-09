@@ -18,7 +18,7 @@
 .ss-add .document-add-existing .treedropdownfield-toggle-panel-link.treedropdownfield-open-tree { background: #fff; border: 1px solid #B3B3B3; border-bottom: none; border-bottom-right-radius: 0; }
 .ss-add .document-add-existing .treedropdownfield-title { width: auto; }
 .ss-add .document-add-existing .treedropdownfield-toggle-panel-link a { display: inline-block; top: 4px; position: relative; }
-.ss-add .document-add-existing .document-list { width: 510px; border: 1px solid #DDD; border-top: none; background: #ffffff; display: none; box-shadow: 0 2px 4px 1px #DDD; max-height: 300px; border-radius: 6px; background-clip: padding-box; overflow: scroll; }
+.ss-add .document-add-existing .document-list { width: 510px; border: 1px solid #DDD; border-top: none; background: #ffffff; display: none; box-shadow: 0 2px 4px 1px #DDD; max-height: 300px; border-radius: 6px; background-clip: padding-box; overflow: scroll;left:0;position:absolute;top:48px; }
 .ss-add .document-add-existing .document-list p { padding: 10px 10px 0; }
 .ss-add .document-add-existing .document-list ul { padding: 4px 0; }
 .ss-add .document-add-existing .document-list ul li { line-height: 18px; }
@@ -26,6 +26,7 @@
 .ss-add .document-add-existing .document-list ul li a:hover { border: 1px solid #CCC; border-radius: 4px; background: rgba(203, 203, 203, 0.4); cursor: pointer; text-decoration: none; outline: none; text-shadow: none; }
 .ss-add .document-add-existing.link-editor-context label { float: left; display: block; width: 176px; padding: 8px 8px 8px 0; line-height: 16px; font-weight: bold; text-shadow: 1px 1px 0 white; }
 .ss-add .document-add-existing.link-editor-context .middleColumn { margin-left: 184px; }
+/*.ss-add .document-add-existing.link-editor-context .middleColumn*/ .doclist-parent{position:relative;}
 .ss-add .document-add-existing.link-editor-context .middleColumn input { background: white; border: 1px solid #B3B3B3; line-height: 16px; margin: 0; border-radius: 4px; background-size: 100%; max-width: 512px; }
 .ss-add .ss-assetuploadfield.link-editor-context label { float: left; display: block; width: 176px; padding: 8px 8px 8px 0; line-height: 16px; font-weight: bold; text-shadow: 1px 1px 0 white; }
 .ss-add .ss-assetuploadfield.link-editor-context .middleColumn { margin-left: 184px; display: block; padding: 8px 8px 8px 0; font-style: italic; min-height: 20px; }

@@ -30,7 +30,10 @@ class DMS implements DMSInterface {
 	}
 
 	static function get_dms_path() {
-		return BASE_PATH . DIRECTORY_SEPARATOR . self::$dmsFolder;
+        $dmsLoc = Config::inst()->get('dms', 'assetsfolder');
+        $dmsLoc = (isset($dmsLoc)) ? $dmsLoc : self::$dmsFolder;
+
+		return BASE_PATH . DIRECTORY_SEPARATOR . $dmsLoc;
 	}
 
 	static function transform_file_to_file_path($file) {

@@ -33,9 +33,11 @@
 					if (typeof(documentName) === "undefined") {
 						documentName = documentID;
 					}
-					$('.ss-add-files').html('<div class="selected-document" data-document-id="'+documentID+'">'+documentName+'</div>');
+					$('.ss-add-files').html('<li><div class="selected-document" data-document-id="'+documentID+'">'+documentName+'</div></li>');
+                    $('.ss-add .ss-assetuploadfield .step4 span label').show();
 				} else {
 					$('.ss-add-files').html('');
+                    $('.ss-add .ss-assetuploadfield .step4 span label').hide();
 				}
 			}
 		});

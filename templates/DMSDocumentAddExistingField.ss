@@ -21,7 +21,7 @@
 	<% if useFieldContext %>
 	<% else %>
 		<label>Link a Document</label>
-		<div class="middleColumn">
+		<div class="middleColumn doclist-parent">
 	<% end_if %>
 		
 			<input class="document-autocomplete text" type="text" placeholder="Search by ID or filename" />

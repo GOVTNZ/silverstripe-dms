@@ -1,4 +1,5 @@
 <?php
+
 class DMS implements DMSInterface
 {
 
@@ -31,9 +32,11 @@ class DMS implements DMSInterface
         return $dms;
     }
 
-    public static function get_dms_path()
-    {
-        return BASE_PATH . DIRECTORY_SEPARATOR . self::$dmsFolder;
+    public static function get_dms_path() {
+        $dmsLoc = Config::inst()->get('dms', 'assetsfolder');
+        $dmsLoc = (isset($dmsLoc)) ? $dmsLoc : self::$dmsFolder;
+
+        return BASE_PATH . DIRECTORY_SEPARATOR . $dmsLoc;
     }
 
     public static function transform_file_to_file_path($file)

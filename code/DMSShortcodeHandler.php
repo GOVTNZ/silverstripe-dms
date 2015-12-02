@@ -6,6 +6,7 @@
  *
  * @package dms
  */
+
 class DMSShortcodeHandler
 {
 
@@ -26,7 +27,7 @@ class DMSShortcodeHandler
                         $extra['element']->setAttribute('data-size', $document->getFileSizeFormatted());
                     }
 
-                    return $document->Link();
+					return $document->Link() . '.' . $document->getExtension();
                 }
             }
         }

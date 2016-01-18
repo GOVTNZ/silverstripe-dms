@@ -1366,4 +1366,5 @@ class DMSDocument_Controller extends Controller
         }
         $this->httpError(404, 'This asset does not exist.');
     }
+
 }

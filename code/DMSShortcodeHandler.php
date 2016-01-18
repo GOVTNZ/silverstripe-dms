@@ -7,37 +7,36 @@
  * @package dms
  */
 
-class DMSShortcodeHandler
-{
+class DMSShortcodeHandler {
 
-    public static function handle(
-        $arguments, $content, ShortcodeParser $parser, $tag, array $extra = array()
-    ) {
-        if (!empty($arguments['id'])) {
-            $document = DMSDocument::get()->byID($arguments['id']);
+	public static function handle(
+		$arguments, $content, ShortcodeParser $parser, $tag, array $extra = array()
+	) {
+		if(!empty($arguments['id'])) {
+			$document = DMSDocument::get()->byID($arguments['id']);
 
-            if ($document && !$document->isHidden()) {
-                if ($content) {
-                    return sprintf(
-                        '<a href="%s">%s</a>', $document->Link(), $parser->parse($content)
-                    );
-                } else {
-                    if (isset($extra['element'])) {
-                        $extra['element']->setAttribute('data-ext', $document->getExtension());
-                        $extra['element']->setAttribute('data-size', $document->getFileSizeFormatted());
-                    }
+			if($document && !$document->isHidden()) {
+				if($content) {
+					return sprintf(
+						'<a href="%s">%s</a>', $document->Link(), $parser->parse($content)
+					);
+				} else {
+					if(isset($extra['element'])) {
+						$extra['element']->setAttribute('data-ext', $document->getExtension());
+						$extra['element']->setAttribute('data-size', $document->getFileSizeFormatted());
+					}
 
 					return $document->Link() . '.' . $document->getExtension();
-                }
-            }
-        }
+				}
+			}
+		}
 
-        $error = ErrorPage::get()->filter('ErrorCode', '404')->First();
+		$error = ErrorPage::get()->filter('ErrorCode', '404')->First();
 
-        if ($error) {
-            return $error->Link();
-        }
+		if($error) {
+			return $error->Link();
+		}
 
-        return '';
-    }
+		return '';
+	}
 }
